@@ -1,0 +1,145 @@
+$text-color: black;
+$body-bg-color: #376e6f;
+$header-bg-color: #2f4454;
+$footer-bg-color: #2f4454;
+$one-news-bg-color: #da7b93;
+$container-btn-color: white;
+$core-bg-color: #376e6f;
+$color-spinner: black;
+$color-footer: white;
+$color-title: white;
+$news-color-title: black;
+$date-auth-color: white;
+
+$spinner-size: 1.5px;
+
+html {
+  // font-size: 62.5%; // 10/16 = 62,5% -> 1rem = 10px
+  font-size: 62.5%;
+  // Section for disable the highlight color in all the document
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  // ------------------------------------------------------------
+}
+
+body {
+  margin: 0 auto;
+  background-color: $body-bg-color;
+  margin-bottom: 2%;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  color: $body-bg-color;
+
+  background-color: white;
+  background-image: url("/src/img/news.png");
+  background-position: 10%;
+  background-repeat: no-repeat;
+  background-size: 2em;
+  font-size: 1.8em;
+  padding-left: 3em;
+}
+
+.core-div {
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+  background-color: $core-bg-color;
+}
+
+.footer {
+  margin-top: 2%;
+  color: $color-footer;
+  display: flex;
+  justify-content: center;
+  background-color: $footer-bg-color;
+  font-size: 1rem;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 0;
+}
+
+.one-news-div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1rem;
+  justify-content: center;
+  border: 0.2rem solid black;
+  color: $text-color;
+  background-color: $one-news-bg-color;
+  font-size: 1rem;
+}
+
+.title-container {
+  color: $news-color-title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.detail-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  color: $date-auth-color;
+}
+
+.btn-container {
+  background-color: $container-btn-color;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.load-more {
+  padding: 0.2em;
+  width: auto;
+  font-size: 1.5rem;
+  color: $text-color;
+  background-color: $container-btn-color;
+}
+
+///////////////////////////////////////////////////
+/// SPINNER SECTION
+.spinner {
+  font-size: $spinner-size; // per settare le grandezze dello spinner perche' e' in em
+  width: 10em;
+  height: 10em;
+  border-top: 1em solid $color-spinner;
+  border-right: 1em solid transparent;
+  border-radius: 50%;
+  margin: auto;
+  animation: spinner 0.6s linear infinite;
+}
+//SPINNER COMPONENT HEAD
+.spinner-head {
+  width: 1em;
+  height: 1em;
+  background-color: $color-spinner;
+  border-radius: 50%;
+  margin-left: 8.5em;
+  margin-top: 0.5em;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+//////////////////////////////////////////////////////
