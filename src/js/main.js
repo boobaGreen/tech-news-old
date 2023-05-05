@@ -63,11 +63,11 @@ async function getXnewsPerPage(array_id_news) {
 
   actual_index = news_per_page + actual_index; // aumento l'indice di partenza da cui prendere le eventuali prox news richieste
 
-  const spinner = document.getElementById("spinner"); // seleziono lo spinner di caricamento
+  const spinner = document.getElementById("spinner-container"); // seleziono lo spinner di caricamento
   spinner.style.display = "none"; //tolgo lo spinner di caricamento
   //document.getElementById("load-more").style.display = "block"; //rimetto il  bottone load more
   document.getElementById("load-more").innerHTML =
-    arrow_dx + "  CLICK FOR MORE NEWS  " + arrox_sx;
+    arrow_dx + " MORE NEWS " + arrox_sx;
 }
 
 async function main_section() {
@@ -81,8 +81,8 @@ async function main_section() {
 
   buttonEl.addEventListener("click", function (event) {
     // funzione quando clicco il bottone load-more
-    document.getElementById("load-more").innerHTML = "LOADING ....";
-    const spinner = document.getElementById("spinner"); // seleziono lo spinner
+    document.getElementById("load-more").innerHTML = "LOADING ...";
+    const spinner = document.getElementById("spinner-container"); // seleziono lo spinner
     spinner.style.display = "block"; // faccio comparire lo spinner a schermo
     //document.getElementById("load-more").style.display = "none"; // tolgo il bottone "load more" finche' non ho scaricato e visualizzato le 10(x) news attuali
     getXnewsPerPage(array500); // chiamo la funzione principale passandogli l'array gia' costruito in precedenza con la lista degli id delle news

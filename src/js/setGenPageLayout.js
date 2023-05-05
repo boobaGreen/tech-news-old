@@ -12,7 +12,7 @@ export function setGenPageLayout() {
   createFirstLevel(
     "footer",
     "footer",
-    "-CLAUDIO DALL'ARA-FOR STAR2IMPACT JAVASCRIPT ADVANCED COURSE-"
+    " - CLAUDIO DALL'ARA - STAR2IMPACT - JS ADV. - "
   ); // creo il footer
 
   const titleEl = document.createElement("p");

@@ -1,6 +1,6 @@
 $text-color: black;
 $body-bg-color: #376e6f;
-$header-bg-color: #2f4454;
+$header-bg-color: #8ec3c4;
 $footer-bg-color: #2f4454;
 $one-news-bg-color: #da7b93;
 $container-btn-color: white;
@@ -10,7 +10,7 @@ $color-footer: white;
 $color-title: white;
 $news-color-title: black;
 $date-auth-color: white;
-
+$header-text-color: #162525;
 $spinner-size: 1.5px;
 
 html {
@@ -43,18 +43,16 @@ body {
   display: flex;
   justify-content: center;
   top: 0;
-  color: $body-bg-color;
+  color: $header-text-color;
 
   background-color: white;
-  background-image: url("/src/img/news.png");
-  background-position: 10%;
-  background-repeat: no-repeat;
-  background-size: 2em;
+
   font-size: 1.8em;
-  padding-left: 3em;
 }
 
 .core-div {
+  margin-left: 2em;
+  margin-right: 2em;
   display: flex;
   flex-direction: column;
   color: $text-color;
@@ -62,7 +60,6 @@ body {
 }
 
 .footer {
-  margin-top: 2%;
   color: $color-footer;
   display: flex;
   justify-content: center;
@@ -74,6 +71,7 @@ body {
 }
 
 .one-news-div {
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   margin: 0.5rem 1rem;
@@ -93,17 +91,21 @@ body {
 }
 
 .detail-div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 3rem;
+  margin: 1em;
   color: $date-auth-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
 }
 
 .btn-container {
+  width: 33%;
+  border-radius: 5px;
   background-color: $container-btn-color;
+  margin: 1.5rem auto 1.5rem auto;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 

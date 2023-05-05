@@ -44,36 +44,53 @@ export function createOneNewsEl(
 
   titleContainer.appendChild(newsTitleEl);
   newElement.appendChild(titleContainer);
-
+  /////////////////////////////////////////////////////////////////////
   // DIV CONTAINER FOR DETAILS
   const newsDetailEl = document.createElement("div");
   newsDetailEl.classList.add("detail-div");
   newElement.appendChild(newsDetailEl);
-
-  // SECTION FOR TIME
-  const newsTimeEl = document.createElement("p");
-  newsTimeEl.classList.add("news-time");
-  newsTimeEl.innerHTML = newsHumanTime;
-  newsDetailEl.appendChild(newsTimeEl);
-
-  // SECTION FOR AUTHOR
-  const newsAuthEl = document.createElement("p");
-  newsAuthEl.classList.add("news-author");
-  newsAuthEl.innerHTML = "Author : " + newsAuthor;
-  newsDetailEl.appendChild(newsAuthEl);
-
+  ////////////////////////////////////////////////////////////////////
   // SECTION FOR LINK
+
+  const divDet1El = document.createElement("div");
+
   const newsLinkEl = document.createElement("a");
   newsLinkEl.id = "url-value";
   newsLinkEl.href = newsLink;
   newsLinkEl.target = "blank";
   if (!newsLink) {
     const pNewsForNotLinked = document.createElement("p");
-    pNewsForNotLinked.innerHTML = "There are no links available for this news";
-    newsDetailEl.appendChild(pNewsForNotLinked);
+    pNewsForNotLinked.innerHTML = "No links available";
+    divDet1El.appendChild(pNewsForNotLinked);
   } else {
     newsLinkEl.innerHTML = "LINK";
-    newsDetailEl.appendChild(newsLinkEl);
+    divDet1El.appendChild(newsLinkEl);
   }
+
+  // SECTION FOR TIME
+
+  const divDet2El = document.createElement("div");
+
+  const newsTimeEl = document.createElement("p");
+  newsTimeEl.classList.add("news-time");
+  newsTimeEl.innerHTML = newsHumanTime;
+  divDet2El.appendChild(newsTimeEl);
+
+  // SECTION FOR AUTHOR
+
+  const divDet3El = document.createElement("div");
+
+  const newsAuthEl = document.createElement("p");
+  newsAuthEl.classList.add("news-author");
+  newsAuthEl.innerHTML = "By : " + newsAuthor;
+  divDet3El.appendChild(newsAuthEl);
+
+  /////////////////////////////////////////
+
+  newsDetailEl.appendChild(divDet1El);
+  newsDetailEl.appendChild(divDet2El);
+  newsDetailEl.appendChild(divDet3El);
+
+  ////////////////////////////////
   PageEl.appendChild(newElement);
 }
