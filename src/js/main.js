@@ -19,7 +19,7 @@ console.log(ver); */
 /////////////////////////////
 
 const API_500_NEWS = "https://hacker-news.firebaseio.com/v0/newstories.json"; // define API_500 const
-const API_ONE_NEWS = "https://hacker-news.firebaseio.com/v0/item/"; // define fix part of One news Api const
+const API_ONE_NEWS = "https://hacker-news.firebaseio.com/v0/item/"; // define fix part of One news Api const https://hacker-news.firebaseio.com/v0/item/35879783.json
 
 let actual_index = 0; // inizalmente ho l'indice di notize "date" a 0
 let news_per_page = 10; // come da richiesta verranno visualizzate 10 news alla volta
